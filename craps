@@ -1,13 +1,12 @@
 import random
 
-
 print("You are Wellcome to the Game of Craps.Try your luck!")
 
 player = input('Press enter to roll dice: ')
-n = random.randint(1, 6)
-m = random.randint(1, 6)
-sum = n + m
-print('The sum of dice is: ', n, ' + ', m, ' = ', sum)
+dice1 = random.randint(1, 6)
+dice2 = random.randint(1, 6)
+sum = dice1 + dice2
+print('The sum of dice is: ', dice1, ' + ', dice2, ' = ', sum)
 if sum == 7 or sum == 11:
     print('Congrats, You Win!')
     print('Game Over')
@@ -20,11 +19,11 @@ elif sum == 4 or sum == 5 or sum == 6 or sum == 8 or sum == 9 or sum == 10:
     while goal != sum or goal != 7:
         player = input('Press enter to roll dice: ')
         goal = 0
-        n = random.randint(1, 6)
-        m = random.randint(1, 6)
-        res = n + m
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+        res = dice1 + dice2
         goal += res
-        print('The sum of dice is: ', n, ' + ', m, ' = ', goal)       
+        print('The sum of dice is: ', dice1, ' + ', dice2, ' = ', goal)       
         if goal == 7:
             print('Sorry, You Lose!')
             print('Game Over')
